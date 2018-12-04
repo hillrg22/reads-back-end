@@ -1,0 +1,22 @@
+{
+  "name": "reads-back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hillrg22/reads-back-end.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hillrg22/reads-back-end/issues"
+  },
+  "homepage": "https://github.com/hillrg22/reads-back-end#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
