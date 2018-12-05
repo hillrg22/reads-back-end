@@ -3,12 +3,11 @@ const app = express()
 const port = 3002
 const parser = require('body-parser')
 const cors = require('cors')
+const knex = require ('./db/connection')
 
 app.use(parser.urlencoded({extended:false}))
 app.use(parser.json())
 
-const books = require('./books.js')
-const test = require('./test.js')
 
 
 
@@ -19,7 +18,10 @@ app.get('/',(req,res,next)=>{
 
 
 app.get('/books',(req,res,next)=> {
-  res.json({books})
+  knex('book')
+    .then(books => {
+      res.json({books: books})
+    })
 })
 
 app.listen(port, () =>{
