@@ -11,10 +11,12 @@ app.use(parser.json())
 
 const bookRoute = require('./Routes/bookRoute.js')
 const authorRoute = require('./Routes/authorRoute.js')
+const author_bookRoute = require('./Routes/author_bookRoute.js')
+
 
 app.use('/books', bookRoute)
 app.use('/authors', authorRoute)
-
+app.use('/author_book', author_bookRoute)
 
 app.get('/',(req,res,next)=>{
   res.send('got it 🏈')
